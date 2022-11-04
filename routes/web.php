@@ -14,13 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return 'hellow world';
-});
-Route::get('/blog', function () {
-    return view ('blog');
+    return view ('welcome');
 });
 
-Route::get('/about', function () {
-    return view ('about');
-});
+// route resource
+Route::resource('/posts', \App\Http\Controllers\PostController::class);
 
