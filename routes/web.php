@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Mockery\Generator\Method;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +20,14 @@ Route::get('/', function () {
 
 // route resource
 Route::resource('/posts', \App\Http\Controllers\PostController::class);
+
+// Route::get('/hai',[\App\Http\Controllers\PostController::class,'hello'])->name('hello');
+
+// Method
+// get 
+// post 
+// PUT
+// Delete 
+// hai_hai
+// HaiHai
 

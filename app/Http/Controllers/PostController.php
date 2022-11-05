@@ -40,6 +40,8 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+
+        // dd($request->all());
         //validate form
         $this->validate($request, [
             'image'     => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
@@ -136,4 +138,43 @@ class PostController extends Controller
         //redirect to index
         return redirect()->route('posts.index')->with(['success' => 'Data Berhasil Dihapus!']);
     }
+
+
+     /**
+     * create
+     *
+     * @return void
+     */
+    public function hello()
+    {
+        return view('hello');
+    }
+
+    /**
+     * show cara 1
+     *
+     * @return void
+     */
+    // public function show($id)
+    // {
+    //     $post = Post::find($id); //where id
+    //     dd($post->image);
+
+    //     // return view('hello');
+    // }
+
+        /**
+     * show cara 1
+     *
+     * @return void
+     */
+    public function show(Post $post)
+    {
+        // $post = Post::find($id); //where id
+        dd($post->image);
+
+    }
+     
+
+   
 }
